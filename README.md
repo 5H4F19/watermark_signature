@@ -1,8 +1,7 @@
-# watermark_signature
+# Welcome to watermark signature
 
+Just put all your desired images in ins folder and change the name parameter in apply() located at index.py file. Then run
 
-## You can watermark all your picture in a folder with one command plus customize text
+    :~$ python3 index.py
 
-
-### Just put your files in 'ins' folder and then run 
-### <span style="color:blue">some *blue* text</span>
+All your photo will be watermarked and will be saved in outs folder
