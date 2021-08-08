@@ -1,4 +1,3 @@
-from os import ctermid
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
@@ -9,7 +8,7 @@ def signature(pic,your_name):
     photo = Image.open('./ins/'+pic)
    
     w,h = photo.size
-    print(w,h)
+   
 
     # making the image editable
 
@@ -32,9 +31,14 @@ def signature(pic,your_name):
     # Image.Image.paste(photo, img2, (50, 50))
     photo.paste(c_text,pos,c_text)
     photo.save('outs/'+ pic)
+    print(pic +"  "+'Watermarked succesfully')
 
 
 list = glob.glob('./ins/*.*')
 
-for photo in list:
-    signature(photo.split('/')[2],' Shafiq soweb ')
+def apply(name):
+    for photo in list:
+        signature(photo.split('/')[2],name)
+
+
+apply(' Shafiq soweb ')
